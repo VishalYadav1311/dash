@@ -5,27 +5,59 @@ import Dashboard3 from "./Dashboard3";
 import "../styles/Home.scss";
 export default function Home() {
   let [value, setValue] = useState("one");
-  function handleclick() {
+  function handleclick(e) {
     if (value != "one") {
       setValue("one");
     }
+    const ele = document.getElementsByClassName("active");
+    console.log(ele);
+    for (let i of ele) {
+      i.className = i.className.replace("active", "");
+    }
+    e.target.className += " active";
   }
-  function handleclick2() {
+  function handleclick2(e) {
     if (value != "two") {
       setValue("two");
     }
+    const ele = document.getElementsByClassName("active");
+    console.log(ele);
+    for (let i of ele) {
+      i.className = i.className.replace("active", "");
+    }
+    e.target.className += " active";
   }
-  function handleclick3() {
+  function handleclick3(e) {
     if (value != "third") {
       setValue("third");
     }
+    const ele = document.getElementsByClassName("active");
+    console.log(ele);
+    for (let i of ele) {
+      i.className = i.className.replace("active", "");
+    }
+    e.target.className += " active";
   }
+ const [expanded,setExpanded]=useState("false");
+ 
+ const handleMouseOver = () => {
+    setExpanded(true);
+  };
+
+  const handleMouseOut = () => {
+    setExpanded(false);
+  };
+
   return (
     <div className="home">
-      <div className="left-sidebar">
-        <button onClick={handleclick}>1</button>
-        <button onClick={handleclick2}>2</button>
-        <button onClick={handleclick3}>3</button>
+      <div
+      className={`left-sidebar ${expanded ? 'expanded' : ''}`}
+      onMouseOver={handleMouseOver}
+      onMouseOut={handleMouseOut}
+    >
+        <button className="dashboard-btn sidebar-btns active" onClick={handleclick}><div></div> <span> Dashboard</span></button>
+        <button className="myleaves-btn sidebar-btns" onClick={handleclick2}><div>22</div><span> My Leaves</span></button>
+        <button className="applyleave-btn sidebar-btns" onClick={handleclick3}><div>33</div><span> Apply Leaves</span></button>
       </div>
 
       <div className="right-sidebar">

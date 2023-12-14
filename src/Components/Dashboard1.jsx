@@ -20,7 +20,7 @@ export default function Dashboard1() {
         <button onClick={handleleaves}>All Leaves</button>
         <button onClick={handlepending}>Pending</button>
       </div>
-      {values == "leaves" ? (
+      {/* {values == "leaves" ? (
         <div className="leaves"> 
         <div>
         
@@ -67,7 +67,7 @@ export default function Dashboard1() {
             <div> <li style={{color:"darkorange"}}>Approval pending</li></div>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 }

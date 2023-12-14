@@ -1,22 +1,109 @@
-.home{
+.home {
     display: flex;
     flex-direction: row;
-    .left-sidebar{
+    width: 100%;
+
+    .left-sidebar {
         width: 5%;
         height: 100vh;
-background-color: bisque;
-display: flex;
-flex-direction: column;
-align-items: center;
-> button{
-    margin: 7px 0;
-}
- 
+        background-color:#022B53;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        >button:first-child{
+         margin-top:7px ;
+        }
+        >button{
+            padding-left: -10px;
+            width: 100%;
+           
+            >span {
+                display: none;
+            }
+        }
+
     }
-    .right-sidebar{
-        background-color: beige;
+  .expanded{
+    width: 20%;
+    
+ }
+
+    .right-sidebar {
+        background-color: rgb(234, 230, 230);
         width: 95%;
         height: 100vh;
-     
+
     }
+}
+
+
+.left-sidebar:hover>button>span {
+    display: inline;
+
+}
+
+ 
+.dashboard-btn{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    height: 40px;
+    background-color:#022B53;
+    >div{
+          width: 25px;
+         height: 25px;
+         background-image: url("../images/firstbtn.png");
+         margin-right: 4px;
+    }
+    >span{
+        font-size: medium;
+        font-weight: 500;
+    }
+} 
+
+.myleaves-btn{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    height: 40px;
+    background-color:#022B53;
+    border: none;
+    >div{
+          width: 25px;
+         height: 25px;
+         background-image: url("../images/firstbtn.png");
+         margin-right: 4px;
+    }
+    >span{
+        font-size: medium;
+        font-weight: 500;
+    }
+} 
+
+.applyleave-btn{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    height: 40px;
+    background-color:#022B53;
+   
+    >div{
+          width: 25px;
+         height: 25px;
+         background-image: url("../images/firstbtn.png");
+         margin-right: 4px;
+    }
+    >span{
+        font-size: medium;
+        font-weight: 500;
+    }
+} 
+// .sidebar-btns:hover{
+   
+//         background-color:#486186;
+    
+// }
+
+.active{
+    background-color: #486186;
 }
